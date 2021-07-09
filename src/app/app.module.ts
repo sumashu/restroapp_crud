@@ -3,14 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RestaurantAddComponent } from './restaurant-add/restaurant-add.component';
+import { RestaurantUpdateComponent } from './restaurant-update/restaurant-update.component';
+import { RestaurantListComponent } from './restaurant-list/restaurant-list.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RestaurantAddComponent,
+    RestaurantUpdateComponent,
+    RestaurantListComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
