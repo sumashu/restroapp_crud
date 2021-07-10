@@ -5,11 +5,11 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommonService {
-
+    url = "http://localhost:3000/restro";
   constructor(private _http: HttpClient) { 
     
   }
   getRestroList() {
-    console.log("this restro method is worked properly");
+    return this._http.get(this.url);
   }
 }

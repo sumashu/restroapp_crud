@@ -1,1 +1,21 @@
-<p>restaurant-list works!</p>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Restro Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Contact</th>
+        <th scope="col">Address</th>
+        <th scope="col">Mobile</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let restro of collection">
+        <td>{{restro.id}}</td>
+        <td>{{restro.name}}</td>
+        <td>{{restro.mobile}}</td>
+        <td>{{restro.address}}</td>
+        <td>{{restro.email}}</td>
+      </tr>
+     
+    </tbody>
+  </table>

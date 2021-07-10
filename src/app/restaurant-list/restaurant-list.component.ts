@@ -7,11 +7,15 @@ import { CommonService } from '../common.service';
   styleUrls: ['./restaurant-list.component.css']
 })
 export class RestaurantListComponent implements OnInit {
-
+   public collection:any;
   constructor(private _commonService: CommonService) { }
 
   ngOnInit(): void {
-    this._commonService.getRestroList();
+    this._commonService.getRestroList().subscribe((result)=>
+    {
+      this.collection= result;
+      console.log(this.collection);
+    });
   }
 
 }
